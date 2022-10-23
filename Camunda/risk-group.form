@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "value": "red",
+          "label": "red"
+        },
+        {
+          "label": "green",
+          "value": "green"
+        },
+        {
+          "label": "yellow",
+          "value": "yellow"
+        }
+      ],
+      "label": "Radio",
+      "type": "radio",
+      "id": "Field_09d4pkj",
+      "key": "risk"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "fd83a24"
+  },
+  "type": "default",
+  "id": "Form_f7c5e874-31e2-466b-8228-793d039af9ee",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}

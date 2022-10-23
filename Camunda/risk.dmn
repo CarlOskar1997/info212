@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="riskestimt" name="risk" namespace="http://camunda.org/schema/1.0/dmn" camunda:diagramRelationId="ddd08881-b9b9-438e-a97c-f9697edd11ee" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.0.0">
+  <decision id="risk" name="risk">
+    <decisionTable id="DecisionTable_0azx1hv" hitPolicy="FIRST">
+      <input id="Input_1" label="age" biodi:width="192">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1v0k27e" label="score" biodi:width="192">
+        <inputExpression id="LiteralExpression_090o5fz" typeRef="integer">
+          <text>score</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0bz8qak" label="make">
+        <inputExpression id="LiteralExpression_1afzmnu" typeRef="string">
+          <text>make</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0pb78fy" label="model">
+        <inputExpression id="LiteralExpression_0h5pwx9" typeRef="string">
+          <text>model</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="risk" name="risk group" typeRef="string"/>
+      <rule id="DecisionRule_1qg1662">
+        <inputEntry id="UnaryTests_0si9v8g">
+          <text>&lt;=20</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ea82a8">
+          <text>&lt;=-30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n7awal">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ys6ybl">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bwq7fh">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d5w88x">
+        <inputEntry id="UnaryTests_1atpv24">
+          <text>&lt;=20</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g8m4k5">
+          <text>[-30..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_001uo3g">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_131d7xc">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04csodz">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x6l0zc">
+        <inputEntry id="UnaryTests_1wlyprf">
+          <text>[20..25]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hgo9jk">
+          <text>&lt;=-40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mlcw8x">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ksgry">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1djhsqr">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13yjihs">
+        <inputEntry id="UnaryTests_1hj5kh9">
+          <text>[20..25]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hyot8d">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0olq03b">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14jbg5i">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q59fbe">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oko4un">
+        <inputEntry id="UnaryTests_0n6c33l">
+          <text>[25..35]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xnhiy2">
+          <text>&lt;=-40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s29yh4">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hdsnm0">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12ss4kf">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1az4n7r">
+        <inputEntry id="UnaryTests_1gjfp94">
+          <text>[25..35]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n7xw6e">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10zp2yh">
+          <text>"Audi","volkswagen"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a2m7fg">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l2c1qy">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zvd9vn">
+        <inputEntry id="UnaryTests_054882m">
+          <text>[25..35]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19cjh96">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oewdfv">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ney9xm">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u42uyw">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pr0j4c">
+        <inputEntry id="UnaryTests_1kp909t">
+          <text>&gt;=35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0shmf12">
+          <text>&lt;=-40</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i73c7x">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s2lzsi">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00uxcjd">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0im51b3">
+        <inputEntry id="UnaryTests_0472m0n">
+          <text>&gt;=35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19sdtcj">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q0xpmj">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fw16f7">
+          <text>"X3"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mt5t5x">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jpi1pj">
+        <inputEntry id="UnaryTests_12euu47">
+          <text>&gt;=35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09azcri">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kbyhlq">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lkhscy">
+          <text>"318i","253i"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fsjbsi">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14aid0o">
+        <inputEntry id="UnaryTests_0mgjgw3">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_187rzcg">
+          <text>&gt;=0</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dwa0ad">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06c7sxp">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hm1y9n">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_152k6ks">
+        <inputEntry id="UnaryTests_1vabetr">
+          <text>&gt;=35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11r56h7">
+          <text>[-40..0]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00bk200">
+          <text/>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03kzweu">
+          <text/>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v4sbx0">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="risk">
+        <dc:Bounds height="80" width="180" x="160" y="80"/>
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -1,0 +1,37 @@
+{
+  "components": [
+    {
+      "label": "age",
+      "type": "number",
+      "id": "Field_050l76b",
+      "key": "age"
+    },
+    {
+      "label": "score",
+      "type": "number",
+      "id": "Field_07bxtij",
+      "key": "score"
+    },
+    {
+      "label": "make",
+      "type": "textfield",
+      "id": "Field_048qlxc",
+      "key": "make"
+    },
+    {
+      "label": "model",
+      "type": "textfield",
+      "id": "Field_1h1kd3u",
+      "key": "model"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "406f735"
+  },
+  "type": "default",
+  "id": "Form_ff1a0d1e-22a4-4704-b6c3-81a0b05ebc5e",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}
