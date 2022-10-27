@@ -1,0 +1,29 @@
+{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "true",
+          "value": "true"
+        },
+        {
+          "label": "false",
+          "value": "false"
+        }
+      ],
+      "label": "check app?",
+      "type": "radio",
+      "id": "Field_0y76mj4",
+      "key": "checked"
+    }
+  ],
+  "schemaVersion": 4,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "fd83a24"
+  },
+  "type": "default",
+  "id": "Form_baad7eba-b0bf-495d-a140-133cef77f725",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "1.3"
+}
